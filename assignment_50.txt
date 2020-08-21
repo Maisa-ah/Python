@@ -1,0 +1,9 @@
+#Maisa Ahmad
+#July 10, 2018
+#This program loops through numbers 10, 8, 6, …, 2, 0
+ADDI $s0, $zero, 10 #set s0 to 10
+ADDI $s1, $zero, 2  #use to decrement counter, $s0
+AGAIN: SUB $s0, $s0, $s1
+BEQ $s0, $zero, DONE
+J AGAIN
+DONE:  #To break out of the loop
